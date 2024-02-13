@@ -63,28 +63,28 @@ linksInternos.forEach((link) => {
 initScrollSuave();
 
 
-function initAnimacaoScroll() {  //13 
-  const sections = document.querySelectorAll(".js-scroll"); //1
+function initAnimacaoScroll() {  
+  const sections = document.querySelectorAll(".js-scroll"); 
 
-  if (sections.length) { // 12 
+  if (sections.length) { 
     const windowMetade = window.innerHeight * 0.6;
 
-    function animaScroll() { // 2 
-      sections.forEach((section) => { // 4 why ? 
-        const sectionTop = section.getBoundingClientRect().top; // 5
-        const isSectionVisible = (sectionTop - windowMetade) < 0; //9
+    function animaScroll() { 
+      sections.forEach((section) => {  
+        const sectionTop = section.getBoundingClientRect().top; 
+        const isSectionVisible = (sectionTop - windowMetade) < 0; 
 
-        if (isSectionVisible) { // 6 
-          section.classList.add("ativo"); // 7
+        if (isSectionVisible) { 
+          section.classList.add("ativo"); 
         } else { // 10 
-          section.classList.remove("ativo"); // 10
+          section.classList.remove("ativo"); 
         }
       });
     }
 
-    animaScroll(); // 11 
+    animaScroll();  
 
-    window.addEventListener("scroll", animaScroll); // 3 
+    window.addEventListener("scroll", animaScroll); 
   }
 }
 
